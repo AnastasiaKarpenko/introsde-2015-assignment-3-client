@@ -25,15 +25,25 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _GetPeopleList_QNAME = new QName("http://ws.soap.assignment.introsde/", "getPeopleList");
+    private final static QName _UpdatePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "updatePerson");
     private final static QName _ReadPerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPerson");
     private final static QName _GetPeopleListResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "getPeopleListResponse");
     private final static QName _ReadPersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonResponse");
+    private final static QName _UpdatePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "updatePersonResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: introsde.assignment.soap.ws
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link UpdatePersonResponse }
+     * 
+     */
+    public UpdatePersonResponse createUpdatePersonResponse() {
+        return new UpdatePersonResponse();
     }
 
     /**
@@ -58,6 +68,14 @@ public class ObjectFactory {
      */
     public ReadPerson createReadPerson() {
         return new ReadPerson();
+    }
+
+    /**
+     * Create an instance of {@link UpdatePerson }
+     * 
+     */
+    public UpdatePerson createUpdatePerson() {
+        return new UpdatePerson();
     }
 
     /**
@@ -94,6 +112,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePerson }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "updatePerson")
+    public JAXBElement<UpdatePerson> createUpdatePerson(UpdatePerson value) {
+        return new JAXBElement<UpdatePerson>(_UpdatePerson_QNAME, UpdatePerson.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReadPerson }{@code >}}
      * 
      */
@@ -118,6 +145,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readPersonResponse")
     public JAXBElement<ReadPersonResponse> createReadPersonResponse(ReadPersonResponse value) {
         return new JAXBElement<ReadPersonResponse>(_ReadPersonResponse_QNAME, ReadPersonResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "updatePersonResponse")
+    public JAXBElement<UpdatePersonResponse> createUpdatePersonResponse(UpdatePersonResponse value) {
+        return new JAXBElement<UpdatePersonResponse>(_UpdatePersonResponse_QNAME, UpdatePersonResponse.class, null, value);
     }
 
 }
