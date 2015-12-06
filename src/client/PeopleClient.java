@@ -1,13 +1,16 @@
 package client;
 
 import java.util.List;
+import java.util.LinkedList;
+
+import java.util.Random;
 
 import introsde.assignment.soap.ws.PeopleService;
 import introsde.assignment.soap.ws.People;
 import introsde.assignment.soap.ws.Person;
 import introsde.assignment.soap.ws.LifeStatus;
 
-import java.util.Random;
+
 
 public class PeopleClient{
     public static void main(String[] args) throws Exception {
@@ -51,7 +54,7 @@ public class PeopleClient{
         System.out.println("METHOD #3: UPDATING PERSON WITH ID = 1 (the first name only) ");
     	printPersonDetails(newPerson);
 
-    	//Method #4 Creating a new person 
+    	//Method #4 Creating a new person with new life status (health profile)
 
     	Person createChuckNorris = new Person();
    
@@ -64,10 +67,30 @@ public class PeopleClient{
     	System.out.println("   ");
         System.out.println("METHOD #4: CREATING A NEW PERSON ");
     	printPersonDetails(createChuckNorris);
-    	
-       
-      
 
+  //   	LifeStatus weight = new LifeStatus();
+		// weight.setValue("78.9");
+		// weight.setMeasure("weight");
+		
+		// LifeStatus height = new LifeStatus();
+		// height.setValue("172");
+		// height.setMeasure("height");
+		
+		// List<LifeStatus> lifeStatus = new LinkedList<LifeStatus>();
+		// lifeStatus.add(weight);
+		// lifeStatus.add(height);
+		
+		// createChuckNorris.setLifeStatus(lifeStatus);
+  //   	printLifeStatus(lifestatus);
+
+
+    	//Method #5 Deleting a person
+		people.deletePerson(newId);
+		System.out.println("   ");
+		System.out.println("METHOD #5: DELETING A PREVIOUSELY CREATED PERSON ");
+		
+
+	
         
     }
 
