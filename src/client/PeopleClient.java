@@ -51,6 +51,19 @@ public class PeopleClient{
         System.out.println("METHOD #3: UPDATING PERSON WITH ID = 1 (the first name only) ");
     	printPersonDetails(newPerson);
 
+    	//Method #4 Creating a new person 
+
+    	Person createChuckNorris = new Person();
+   
+    	createChuckNorris.setName("Chuck");
+    	createChuckNorris.setLastname("Norris");
+    	createChuckNorris.setBirthdate("1945/01/01");
+    	int newId = people.createPerson(createChuckNorris);
+
+    	createChuckNorris = people.readPerson(newId);
+    	System.out.println("   ");
+        System.out.println("METHOD #4: CREATING A NEW PERSON ");
+    	printPersonDetails(createChuckNorris);
     	
        
       
@@ -59,7 +72,7 @@ public class PeopleClient{
     }
 
     public static void printLifeStatus(LifeStatus ls) {
-    	System.out.println("Person's lifestatus: ");
+    	System.out.println("Person's lifestatus measure: ");
     	System.out.println("Measure name: " + ls.getMeasure());
     	System.out.println("Value: " + ls.getValue());
 
