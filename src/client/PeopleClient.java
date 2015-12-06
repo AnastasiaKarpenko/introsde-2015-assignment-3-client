@@ -12,15 +12,31 @@ public class PeopleClient{
         PeopleService service = new PeopleService();
         People people = service.getPeopleImplPort();
         Person p = people.readPerson(1);
-        // List<Person> pList = people.getPeopleList();
+	    
         
+        
+        //Method #1 Print all the people 
+        System.out.println("  ");
+        System.out.println("METHOD #1: PRINTING ALL THE PEOPLE ");
+        List<Person> pList = people.getPeopleList();
+        for (Person per : pList) {
+        	System.out.println("   ");
+        	printPersonDetails(per);
+        	List<LifeStatus> lsList = per.getLifeStatus();
+        	for (LifeStatus ls : lsList) {
+        		printLifeStatus(ls);
+        	}
+        }
+
+	    
+
 
         //Method #2 Print a person (with id=1)
-
-        System.out.println("Method #2: readPerson(1) ");
-        System.out.println("Person id " + p.getIdPerson());
-        System.out.println("Person's name " + p.getName());
-        System.out.println("Person's lastname " + p.getLastname());
+        System.out.println("   ");
+        System.out.println("METHOD #2: READING THE PERSON WITH ID = 1 ");
+        System.out.println("Person id: " + p.getIdPerson());
+        System.out.println("Person's name: " + p.getName());
+        System.out.println("Person's lastname: " + p.getLastname());
         System.out.println("Person's lifestatus: ");
 
         List<LifeStatus> lsList = p.getLifeStatus();
@@ -31,12 +47,19 @@ public class PeopleClient{
         
 
 
-        // System.out.println("Result ==> "+pList);
-        // System.out.println("First Person in the list ==> "+pList.get(0).getName());
+        
     }
 
     public static void printLifeStatus(LifeStatus ls) {
-    	System.out.println("Measure name " + ls.getMeasure());
-    	System.out.println("Value " + ls.getValue());
+    	System.out.println("Measure name: " + ls.getMeasure());
+    	System.out.println("Value: " + ls.getValue());
+
+    }
+
+    public static void printPersonDetails(Person per) {
+    	System.out.println("Person id: " + per.getIdPerson());
+        System.out.println("Person's name: " + per.getName());
+        System.out.println("Person's lastname: " + per.getLastname());
+        System.out.println("Person's lifestatus: ");
     }
 }

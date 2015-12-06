@@ -24,7 +24,9 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GetPeopleList_QNAME = new QName("http://ws.soap.assignment.introsde/", "getPeopleList");
     private final static QName _ReadPerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPerson");
+    private final static QName _GetPeopleListResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "getPeopleListResponse");
     private final static QName _ReadPersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonResponse");
 
     /**
@@ -43,11 +45,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetPeopleListResponse }
+     * 
+     */
+    public GetPeopleListResponse createGetPeopleListResponse() {
+        return new GetPeopleListResponse();
+    }
+
+    /**
      * Create an instance of {@link ReadPerson }
      * 
      */
     public ReadPerson createReadPerson() {
         return new ReadPerson();
+    }
+
+    /**
+     * Create an instance of {@link GetPeopleList }
+     * 
+     */
+    public GetPeopleList createGetPeopleList() {
+        return new GetPeopleList();
     }
 
     /**
@@ -67,12 +85,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetPeopleList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "getPeopleList")
+    public JAXBElement<GetPeopleList> createGetPeopleList(GetPeopleList value) {
+        return new JAXBElement<GetPeopleList>(_GetPeopleList_QNAME, GetPeopleList.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReadPerson }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readPerson")
     public JAXBElement<ReadPerson> createReadPerson(ReadPerson value) {
         return new JAXBElement<ReadPerson>(_ReadPerson_QNAME, ReadPerson.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetPeopleListResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "getPeopleListResponse")
+    public JAXBElement<GetPeopleListResponse> createGetPeopleListResponse(GetPeopleListResponse value) {
+        return new JAXBElement<GetPeopleListResponse>(_GetPeopleListResponse_QNAME, GetPeopleListResponse.class, null, value);
     }
 
     /**
