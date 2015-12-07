@@ -5,10 +5,8 @@ import java.util.LinkedList;
 
 import java.util.Random;
 
-import introsde.assignment.soap.ws.PeopleService;
-import introsde.assignment.soap.ws.People;
-import introsde.assignment.soap.ws.Person;
-import introsde.assignment.soap.ws.LifeStatus;
+import introsde.assignment.soap.ws.*;
+
 
 
 
@@ -104,9 +102,14 @@ public class PeopleClient{
 		System.out.println("People number after deleting the previousely created person: "+pList.size());
 		
 		//Method #6 readPersonHistory
-
-
-
+		System.out.println("  ");
+        System.out.println("METHOD #6: READING AND PRINTING HISTORY OF WEIGHT MEASURES FOR PERSON ID = 1");
+        List<HealthMeasureHistory> hList = people.readPersonHistory(1, "weight");
+        for (HealthMeasureHistory hist : hList) {
+        	System.out.println("   ");
+        	printMeasureHistory(hist);
+        	
+        }
 	
         
     }
@@ -125,4 +128,19 @@ public class PeopleClient{
         System.out.println("Person's birthdate: " + per.getBirthdate());
         
     }
+
+    public static void printMeasureHistory(HealthMeasureHistory hist) {
+    	System.out.println("Id of Measure History " + hist.getIdMeasureHistory());
+        System.out.println("Measure name: " + hist.getMeasureName());
+        System.out.println("Timestamp of the measure: " + hist.getTimestamp());
+        System.out.println("Measure's value: " + hist.getValue());
+        
+    }
+
+
+
+
+
+
+
 }

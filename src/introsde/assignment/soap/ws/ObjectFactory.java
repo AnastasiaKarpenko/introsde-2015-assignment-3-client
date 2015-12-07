@@ -30,8 +30,10 @@ public class ObjectFactory {
     private final static QName _ReadPerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPerson");
     private final static QName _GetPeopleListResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "getPeopleListResponse");
     private final static QName _DeletePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "deletePersonResponse");
+    private final static QName _ReadPersonHistory_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonHistory");
     private final static QName _ReadPersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonResponse");
     private final static QName _DeletePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "deletePerson");
+    private final static QName _ReadPersonHistoryResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonHistoryResponse");
     private final static QName _CreatePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "createPersonResponse");
     private final static QName _UpdatePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "updatePersonResponse");
 
@@ -48,6 +50,14 @@ public class ObjectFactory {
      */
     public DeletePerson createDeletePerson() {
         return new DeletePerson();
+    }
+
+    /**
+     * Create an instance of {@link ReadPersonHistoryResponse }
+     * 
+     */
+    public ReadPersonHistoryResponse createReadPersonHistoryResponse() {
+        return new ReadPersonHistoryResponse();
     }
 
     /**
@@ -72,6 +82,14 @@ public class ObjectFactory {
      */
     public DeletePersonResponse createDeletePersonResponse() {
         return new DeletePersonResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadPersonHistory }
+     * 
+     */
+    public ReadPersonHistory createReadPersonHistory() {
+        return new ReadPersonHistory();
     }
 
     /**
@@ -120,6 +138,14 @@ public class ObjectFactory {
      */
     public GetPeopleList createGetPeopleList() {
         return new GetPeopleList();
+    }
+
+    /**
+     * Create an instance of {@link HealthMeasureHistory }
+     * 
+     */
+    public HealthMeasureHistory createHealthMeasureHistory() {
+        return new HealthMeasureHistory();
     }
 
     /**
@@ -193,6 +219,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadPersonHistory }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readPersonHistory")
+    public JAXBElement<ReadPersonHistory> createReadPersonHistory(ReadPersonHistory value) {
+        return new JAXBElement<ReadPersonHistory>(_ReadPersonHistory_QNAME, ReadPersonHistory.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReadPersonResponse }{@code >}}
      * 
      */
@@ -208,6 +243,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "deletePerson")
     public JAXBElement<DeletePerson> createDeletePerson(DeletePerson value) {
         return new JAXBElement<DeletePerson>(_DeletePerson_QNAME, DeletePerson.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadPersonHistoryResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readPersonHistoryResponse")
+    public JAXBElement<ReadPersonHistoryResponse> createReadPersonHistoryResponse(ReadPersonHistoryResponse value) {
+        return new JAXBElement<ReadPersonHistoryResponse>(_ReadPersonHistoryResponse_QNAME, ReadPersonHistoryResponse.class, null, value);
     }
 
     /**
