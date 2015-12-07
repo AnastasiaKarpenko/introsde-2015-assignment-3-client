@@ -127,4 +127,19 @@ public interface People {
     @Action(input = "http://ws.soap.assignment.introsde/People/readMeasureTypesRequest", output = "http://ws.soap.assignment.introsde/People/readMeasureTypesResponse")
     public List<MeasureDefinition> readMeasureTypes();
 
+    /**
+     * 
+     * @param historyMeasureId
+     * @return
+     *     returns introsde.assignment.soap.ws.HealthMeasureHistory
+     */
+    @WebMethod
+    @WebResult(name = "measures", targetNamespace = "")
+    @RequestWrapper(localName = "readMeasureHistoryId", targetNamespace = "http://ws.soap.assignment.introsde/", className = "introsde.assignment.soap.ws.ReadMeasureHistoryId")
+    @ResponseWrapper(localName = "readMeasureHistoryIdResponse", targetNamespace = "http://ws.soap.assignment.introsde/", className = "introsde.assignment.soap.ws.ReadMeasureHistoryIdResponse")
+    @Action(input = "http://ws.soap.assignment.introsde/People/readMeasureHistoryIdRequest", output = "http://ws.soap.assignment.introsde/People/readMeasureHistoryIdResponse")
+    public HealthMeasureHistory readMeasureHistoryId(
+        @WebParam(name = "historyMeasureId", targetNamespace = "")
+        int historyMeasureId);
+
 }

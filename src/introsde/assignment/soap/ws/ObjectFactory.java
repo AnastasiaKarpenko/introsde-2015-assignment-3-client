@@ -24,8 +24,10 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ReadMeasureHistoryIdResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readMeasureHistoryIdResponse");
     private final static QName _ReadMeasureTypes_QNAME = new QName("http://ws.soap.assignment.introsde/", "readMeasureTypes");
     private final static QName _CreatePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "createPerson");
+    private final static QName _ReadMeasureHistoryId_QNAME = new QName("http://ws.soap.assignment.introsde/", "readMeasureHistoryId");
     private final static QName _ReadMeasureTypesResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readMeasureTypesResponse");
     private final static QName _DeletePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "deletePerson");
     private final static QName _CreatePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "createPersonResponse");
@@ -79,11 +81,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ReadMeasureHistoryId }
+     * 
+     */
+    public ReadMeasureHistoryId createReadMeasureHistoryId() {
+        return new ReadMeasureHistoryId();
+    }
+
+    /**
      * Create an instance of {@link ReadMeasureTypes }
      * 
      */
     public ReadMeasureTypes createReadMeasureTypes() {
         return new ReadMeasureTypes();
+    }
+
+    /**
+     * Create an instance of {@link ReadMeasureHistoryIdResponse }
+     * 
+     */
+    public ReadMeasureHistoryIdResponse createReadMeasureHistoryIdResponse() {
+        return new ReadMeasureHistoryIdResponse();
     }
 
     /**
@@ -191,6 +209,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasureHistoryIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readMeasureHistoryIdResponse")
+    public JAXBElement<ReadMeasureHistoryIdResponse> createReadMeasureHistoryIdResponse(ReadMeasureHistoryIdResponse value) {
+        return new JAXBElement<ReadMeasureHistoryIdResponse>(_ReadMeasureHistoryIdResponse_QNAME, ReadMeasureHistoryIdResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasureTypes }{@code >}}
      * 
      */
@@ -206,6 +233,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "createPerson")
     public JAXBElement<CreatePerson> createCreatePerson(CreatePerson value) {
         return new JAXBElement<CreatePerson>(_CreatePerson_QNAME, CreatePerson.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasureHistoryId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readMeasureHistoryId")
+    public JAXBElement<ReadMeasureHistoryId> createReadMeasureHistoryId(ReadMeasureHistoryId value) {
+        return new JAXBElement<ReadMeasureHistoryId>(_ReadMeasureHistoryId_QNAME, ReadMeasureHistoryId.class, null, value);
     }
 
     /**

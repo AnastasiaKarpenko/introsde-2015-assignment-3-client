@@ -100,7 +100,7 @@ public class PeopleClient{
 		System.out.println("People number after deleting the previousely created person: "+pList.size());
 		
 		
-		//Method #6 Read person's measure History
+		//Method #6 Read person's measure History of one measure
 		System.out.println("  ");
         System.out.println("METHOD #6: READING AND PRINTING HISTORY OF WEIGHT MEASURES FOR PERSON ID = 1");
         List<HealthMeasureHistory> hList = people.readPersonHistory(1, "weight");
@@ -120,7 +120,12 @@ public class PeopleClient{
         	
         }
 
-        
+        // Method #8 Read value of measure type mid=1 
+
+        HealthMeasureHistory hmh = people.readMeasureHistoryId(1);
+		System.out.println("  ");
+        System.out.println("METHOD #8: PRINTING THE VALUE OF A MEASURE TYPE WITH MID ");
+        System.out.println("Weight with mid = 1 of the person id = 1 has value: " + hmh.getValue());
     }
 
     public static void printLifeStatus(LifeStatus ls) {
