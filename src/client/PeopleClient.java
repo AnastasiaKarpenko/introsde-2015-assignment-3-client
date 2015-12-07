@@ -105,6 +105,7 @@ public class PeopleClient{
     	System.out.println("Person id: " + per.getIdPerson());
         System.out.println("Person's name: " + per.getName());
         System.out.println("Person's lastname: " + per.getLastname());
+        System.out.println("Person's birthdate: " + per.getBirthdate());
         
     }
 }
