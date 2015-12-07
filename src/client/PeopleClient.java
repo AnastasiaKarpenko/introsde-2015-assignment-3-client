@@ -21,8 +21,9 @@ public class PeopleClient{
         logWriter = new PrintWriter("logfile.txt", "UTF-8");
         Person p = people.readPerson(1);
 	    
-        
-        
+        logWriter.println("  ");
+        logWriter.println(" WSDL LOCATION: https://secure-beyond-2505.herokuapp.com/ws/people?wsdl ");
+        logWriter.println("  ");
         //Method #1 Print all the people 
         logWriter.println("  ");
         logWriter.println("METHOD #1: PRINTING ALL THE PEOPLE ");
