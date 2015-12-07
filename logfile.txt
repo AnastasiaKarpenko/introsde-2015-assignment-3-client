@@ -1,13 +1,16 @@
   
+ WSDL LOCATION: https://secure-beyond-2505.herokuapp.com/ws/people?wsdl 
+  
+  
 METHOD #1: PRINTING ALL THE PEOPLE 
    
 Person id: 1
-Person's name: Laura1434173223
+Person's name: Laura-424620435
 Person's lastname: Pausini
 Person's birthdate: 1987/02/03
 Person's lifestatus measure: 
 Measure name: weight
-Value: 99
+Value: 199
 Person's lifestatus measure: 
 Measure name: height
 Value: 1.78
@@ -49,24 +52,24 @@ People number: 4
    
 METHOD #2: READING THE PERSON WITH ID = 1 
 Person id: 1
-Person's name: Laura1434173223
+Person's name: Laura-424620435
 Person's lastname: Pausini
 Person's birthdate: 1987/02/03
 Person's lifestatus measure: 
 Measure name: weight
-Value: 99
+Value: 199
 Person's lifestatus measure: 
 Measure name: height
 Value: 1.78
    
 METHOD #3: UPDATING PERSON WITH ID = 1 (the first name only) 
 Person id: 1
-Person's name: Laura2135366904
+Person's name: Laura-1213598028
 Person's lastname: Pausini
 Person's birthdate: 1987/02/03
    
 METHOD #4: CREATING A NEW PERSON 
-Person id: 6457
+Person id: 6504
 Person's name: Chuck
 Person's lastname: Norris
 Person's birthdate: 1945/01/01
@@ -103,21 +106,6 @@ Id of Measure History 15
 Measure name: weight
 Timestamp of the measure: 2018-12-27 23:00:00
 Measure's value: 100
-   
-Id of Measure History 915
-Measure name: weight
-Timestamp of the measure: null
-Measure's value: 199
-   
-Id of Measure History 916
-Measure name: weight
-Timestamp of the measure: null
-Measure's value: 99
-   
-Id of Measure History 917
-Measure name: weight
-Timestamp of the measure: null
-Measure's value: 99
   
 METHOD #7: READING AND PRINTING ALL MEASURE TYPES
    
@@ -138,15 +126,15 @@ Weight with mid = 1 of the person id = 1 has value: 83
   
 METHOD #9: CREATE A NEW MEASURE (WEIGHT) AND UPDATE A HEALTH MEASURE HISTORY OF PERSON 1
 Person id: 1
-Person's name: Laura2135366904
+Person's name: Laura-1213598028
 Person's lastname: Pausini
 Person's birthdate: 1987/02/03
 Person's lifestatus measure: 
-Measure name: weight
-Value: 99
-Person's lifestatus measure: 
 Measure name: height
 Value: 1.78
+Person's lifestatus measure: 
+Measure name: weight
+Value: 99
   
 READING AND PRINTING HISTORY OF WEIGHT MEASURES FOR PERSON ID = 1
    
@@ -170,22 +158,7 @@ Measure name: weight
 Timestamp of the measure: 2018-12-27 23:00:00
 Measure's value: 100
    
-Id of Measure History 915
+Id of Measure History 965
 Measure name: weight
 Timestamp of the measure: null
 Measure's value: 199
-   
-Id of Measure History 916
-Measure name: weight
-Timestamp of the measure: null
-Measure's value: 99
-   
-Id of Measure History 917
-Measure name: weight
-Timestamp of the measure: null
-Measure's value: 99
-   
-Id of Measure History 918
-Measure name: weight
-Timestamp of the measure: null
-Measure's value: 99
