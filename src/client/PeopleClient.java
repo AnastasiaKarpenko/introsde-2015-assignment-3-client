@@ -54,8 +54,8 @@ public class PeopleClient{
         System.out.println("METHOD #3: UPDATING PERSON WITH ID = 1 (the first name only) ");
     	printPersonDetails(newPerson);
 
+    	
     	//Method #4 Creating a new person with new life status (health profile)
-
     	Person createChuckNorris = new Person();
    
     	createChuckNorris.setName("Chuck");
@@ -90,8 +90,6 @@ public class PeopleClient{
     	pList = people.getPeopleList();
 		System.out.println("People number before deleting the previousely created person: "+pList.size());
 
-   	
-
 
     	//Method #5 Deleting a person
     	
@@ -101,7 +99,8 @@ public class PeopleClient{
 		pList = people.getPeopleList();
 		System.out.println("People number after deleting the previousely created person: "+pList.size());
 		
-		//Method #6 readPersonHistory
+		
+		//Method #6 Read person's measure History
 		System.out.println("  ");
         System.out.println("METHOD #6: READING AND PRINTING HISTORY OF WEIGHT MEASURES FOR PERSON ID = 1");
         List<HealthMeasureHistory> hList = people.readPersonHistory(1, "weight");
@@ -111,6 +110,16 @@ public class PeopleClient{
         	
         }
 	
+        //Method #7 Read all measure types
+		System.out.println("  ");
+        System.out.println("METHOD #7: READING AND PRINTING ALL MEASURE TYPES");
+        List<MeasureDefinition> mhList = people.readMeasureTypes();
+        for (MeasureDefinition mh : mhList) {
+        	System.out.println("   ");
+        	printAllMeasureTypes(mh);
+        	
+        }
+
         
     }
 
@@ -137,7 +146,10 @@ public class PeopleClient{
         
     }
 
-
+    public static void printAllMeasureTypes(MeasureDefinition mh) {
+    	System.out.println("Measure type: " + mh.getMeasureName());
+        
+    }
 
 
 

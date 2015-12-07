@@ -24,17 +24,19 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ReadMeasureTypes_QNAME = new QName("http://ws.soap.assignment.introsde/", "readMeasureTypes");
+    private final static QName _CreatePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "createPerson");
+    private final static QName _ReadMeasureTypesResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readMeasureTypesResponse");
+    private final static QName _DeletePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "deletePerson");
+    private final static QName _CreatePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "createPersonResponse");
     private final static QName _GetPeopleList_QNAME = new QName("http://ws.soap.assignment.introsde/", "getPeopleList");
     private final static QName _UpdatePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "updatePerson");
-    private final static QName _CreatePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "createPerson");
     private final static QName _ReadPerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPerson");
     private final static QName _GetPeopleListResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "getPeopleListResponse");
     private final static QName _DeletePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "deletePersonResponse");
     private final static QName _ReadPersonHistory_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonHistory");
     private final static QName _ReadPersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonResponse");
-    private final static QName _DeletePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "deletePerson");
     private final static QName _ReadPersonHistoryResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonHistoryResponse");
-    private final static QName _CreatePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "createPersonResponse");
     private final static QName _UpdatePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "updatePersonResponse");
 
     /**
@@ -53,19 +55,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReadPersonHistoryResponse }
-     * 
-     */
-    public ReadPersonHistoryResponse createReadPersonHistoryResponse() {
-        return new ReadPersonHistoryResponse();
-    }
-
-    /**
      * Create an instance of {@link CreatePersonResponse }
      * 
      */
     public CreatePersonResponse createCreatePersonResponse() {
         return new CreatePersonResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadMeasureTypesResponse }
+     * 
+     */
+    public ReadMeasureTypesResponse createReadMeasureTypesResponse() {
+        return new ReadMeasureTypesResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreatePerson }
+     * 
+     */
+    public CreatePerson createCreatePerson() {
+        return new CreatePerson();
+    }
+
+    /**
+     * Create an instance of {@link ReadMeasureTypes }
+     * 
+     */
+    public ReadMeasureTypes createReadMeasureTypes() {
+        return new ReadMeasureTypes();
+    }
+
+    /**
+     * Create an instance of {@link ReadPersonHistoryResponse }
+     * 
+     */
+    public ReadPersonHistoryResponse createReadPersonHistoryResponse() {
+        return new ReadPersonHistoryResponse();
     }
 
     /**
@@ -117,14 +143,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CreatePerson }
-     * 
-     */
-    public CreatePerson createCreatePerson() {
-        return new CreatePerson();
-    }
-
-    /**
      * Create an instance of {@link UpdatePerson }
      * 
      */
@@ -157,11 +175,64 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link MeasureDefinition }
+     * 
+     */
+    public MeasureDefinition createMeasureDefinition() {
+        return new MeasureDefinition();
+    }
+
+    /**
      * Create an instance of {@link Person }
      * 
      */
     public Person createPerson() {
         return new Person();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasureTypes }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readMeasureTypes")
+    public JAXBElement<ReadMeasureTypes> createReadMeasureTypes(ReadMeasureTypes value) {
+        return new JAXBElement<ReadMeasureTypes>(_ReadMeasureTypes_QNAME, ReadMeasureTypes.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreatePerson }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "createPerson")
+    public JAXBElement<CreatePerson> createCreatePerson(CreatePerson value) {
+        return new JAXBElement<CreatePerson>(_CreatePerson_QNAME, CreatePerson.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasureTypesResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readMeasureTypesResponse")
+    public JAXBElement<ReadMeasureTypesResponse> createReadMeasureTypesResponse(ReadMeasureTypesResponse value) {
+        return new JAXBElement<ReadMeasureTypesResponse>(_ReadMeasureTypesResponse_QNAME, ReadMeasureTypesResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeletePerson }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "deletePerson")
+    public JAXBElement<DeletePerson> createDeletePerson(DeletePerson value) {
+        return new JAXBElement<DeletePerson>(_DeletePerson_QNAME, DeletePerson.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreatePersonResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "createPersonResponse")
+    public JAXBElement<CreatePersonResponse> createCreatePersonResponse(CreatePersonResponse value) {
+        return new JAXBElement<CreatePersonResponse>(_CreatePersonResponse_QNAME, CreatePersonResponse.class, null, value);
     }
 
     /**
@@ -180,15 +251,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "updatePerson")
     public JAXBElement<UpdatePerson> createUpdatePerson(UpdatePerson value) {
         return new JAXBElement<UpdatePerson>(_UpdatePerson_QNAME, UpdatePerson.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreatePerson }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "createPerson")
-    public JAXBElement<CreatePerson> createCreatePerson(CreatePerson value) {
-        return new JAXBElement<CreatePerson>(_CreatePerson_QNAME, CreatePerson.class, null, value);
     }
 
     /**
@@ -237,30 +299,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeletePerson }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "deletePerson")
-    public JAXBElement<DeletePerson> createDeletePerson(DeletePerson value) {
-        return new JAXBElement<DeletePerson>(_DeletePerson_QNAME, DeletePerson.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReadPersonHistoryResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readPersonHistoryResponse")
     public JAXBElement<ReadPersonHistoryResponse> createReadPersonHistoryResponse(ReadPersonHistoryResponse value) {
         return new JAXBElement<ReadPersonHistoryResponse>(_ReadPersonHistoryResponse_QNAME, ReadPersonHistoryResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreatePersonResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "createPersonResponse")
-    public JAXBElement<CreatePersonResponse> createCreatePersonResponse(CreatePersonResponse value) {
-        return new JAXBElement<CreatePersonResponse>(_CreatePersonResponse_QNAME, CreatePersonResponse.class, null, value);
     }
 
     /**
