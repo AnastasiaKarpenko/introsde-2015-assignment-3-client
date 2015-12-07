@@ -27,18 +27,6 @@ public interface People {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<introsde.assignment.soap.ws.Person>
-     */
-    @WebMethod
-    @WebResult(name = "people", targetNamespace = "")
-    @RequestWrapper(localName = "getPeopleList", targetNamespace = "http://ws.soap.assignment.introsde/", className = "introsde.assignment.soap.ws.GetPeopleList")
-    @ResponseWrapper(localName = "getPeopleListResponse", targetNamespace = "http://ws.soap.assignment.introsde/", className = "introsde.assignment.soap.ws.GetPeopleListResponse")
-    @Action(input = "http://ws.soap.assignment.introsde/People/getPeopleListRequest", output = "http://ws.soap.assignment.introsde/People/getPeopleListResponse")
-    public List<Person> getPeopleList();
-
-    /**
-     * 
      * @param personId
      * @return
      *     returns introsde.assignment.soap.ws.Person
@@ -141,5 +129,38 @@ public interface People {
     public HealthMeasureHistory readMeasureHistoryId(
         @WebParam(name = "historyMeasureId", targetNamespace = "")
         int historyMeasureId);
+
+    /**
+     * 
+     * @param idPerson
+     * @param newHealthMeasureHistory
+     * @param measureType
+     * @return
+     *     returns introsde.assignment.soap.ws.HealthMeasureHistory
+     */
+    @WebMethod
+    @WebResult(name = "healthMeasureHistoryObject", targetNamespace = "")
+    @RequestWrapper(localName = "updatePersonHealthMeasureHistory", targetNamespace = "http://ws.soap.assignment.introsde/", className = "introsde.assignment.soap.ws.UpdatePersonHealthMeasureHistory")
+    @ResponseWrapper(localName = "updatePersonHealthMeasureHistoryResponse", targetNamespace = "http://ws.soap.assignment.introsde/", className = "introsde.assignment.soap.ws.UpdatePersonHealthMeasureHistoryResponse")
+    @Action(input = "http://ws.soap.assignment.introsde/People/updatePersonHealthMeasureHistoryRequest", output = "http://ws.soap.assignment.introsde/People/updatePersonHealthMeasureHistoryResponse")
+    public HealthMeasureHistory updatePersonHealthMeasureHistory(
+        @WebParam(name = "idPerson", targetNamespace = "")
+        int idPerson,
+        @WebParam(name = "measureType", targetNamespace = "")
+        String measureType,
+        @WebParam(name = "newHealthMeasureHistory", targetNamespace = "")
+        HealthMeasureHistory newHealthMeasureHistory);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<introsde.assignment.soap.ws.Person>
+     */
+    @WebMethod
+    @WebResult(name = "people", targetNamespace = "")
+    @RequestWrapper(localName = "getPeopleList", targetNamespace = "http://ws.soap.assignment.introsde/", className = "introsde.assignment.soap.ws.GetPeopleList")
+    @ResponseWrapper(localName = "getPeopleListResponse", targetNamespace = "http://ws.soap.assignment.introsde/", className = "introsde.assignment.soap.ws.GetPeopleListResponse")
+    @Action(input = "http://ws.soap.assignment.introsde/People/getPeopleListRequest", output = "http://ws.soap.assignment.introsde/People/getPeopleListResponse")
+    public List<Person> getPeopleList();
 
 }

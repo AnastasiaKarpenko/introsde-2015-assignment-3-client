@@ -126,7 +126,34 @@ public class PeopleClient{
 		System.out.println("  ");
         System.out.println("METHOD #8: PRINTING THE VALUE OF A MEASURE TYPE WITH MID ");
         System.out.println("Weight with mid = 1 of the person id = 1 has value: " + hmh.getValue());
+
+
+		// Method #9 create a new measure 
+        System.out.println("  ");
+        System.out.println("METHOD #9: CREATE A NEW MEASURE (WEIGHT) AND UPDATE A HEALTH MEASURE HISTORY OF PERSON 1");
+    	
+    	HealthMeasureHistory newHMH = new HealthMeasureHistory();
+    	newHMH.setValue("99");
+    	HealthMeasureHistory newHMH2 = people.updatePersonHealthMeasureHistory(1, "weight", newHMH );
+    	Person p1 = people.readPerson(1);
+    	printPersonDetails(p1);
+
+        List<LifeStatus> lsList3 = p1.getLifeStatus();
+        for (LifeStatus ls3 : lsList3) {
+        	printLifeStatus(ls3);
+        }
+
+        System.out.println("  ");
+        System.out.println( "READING AND PRINTING HISTORY OF WEIGHT MEASURES FOR PERSON ID = 1");
+        List<HealthMeasureHistory> hList2 = people.readPersonHistory(1, "weight");
+        for (HealthMeasureHistory hist2 : hList2) {
+        	System.out.println("   ");
+        	printMeasureHistory(hist2);
+        	
+        }
+    	
     }
+
 
     public static void printLifeStatus(LifeStatus ls) {
     	System.out.println("Person's lifestatus measure: ");

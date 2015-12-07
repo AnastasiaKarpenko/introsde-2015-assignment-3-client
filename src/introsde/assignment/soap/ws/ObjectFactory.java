@@ -32,12 +32,14 @@ public class ObjectFactory {
     private final static QName _DeletePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "deletePerson");
     private final static QName _CreatePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "createPersonResponse");
     private final static QName _GetPeopleList_QNAME = new QName("http://ws.soap.assignment.introsde/", "getPeopleList");
+    private final static QName _UpdatePersonHealthMeasureHistory_QNAME = new QName("http://ws.soap.assignment.introsde/", "updatePersonHealthMeasureHistory");
     private final static QName _UpdatePerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "updatePerson");
     private final static QName _ReadPerson_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPerson");
     private final static QName _GetPeopleListResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "getPeopleListResponse");
     private final static QName _DeletePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "deletePersonResponse");
     private final static QName _ReadPersonHistory_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonHistory");
     private final static QName _ReadPersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonResponse");
+    private final static QName _UpdatePersonHealthMeasureHistoryResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "updatePersonHealthMeasureHistoryResponse");
     private final static QName _ReadPersonHistoryResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "readPersonHistoryResponse");
     private final static QName _UpdatePersonResponse_QNAME = new QName("http://ws.soap.assignment.introsde/", "updatePersonResponse");
 
@@ -145,6 +147,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UpdatePersonHealthMeasureHistoryResponse }
+     * 
+     */
+    public UpdatePersonHealthMeasureHistoryResponse createUpdatePersonHealthMeasureHistoryResponse() {
+        return new UpdatePersonHealthMeasureHistoryResponse();
+    }
+
+    /**
      * Create an instance of {@link GetPeopleListResponse }
      * 
      */
@@ -158,6 +168,14 @@ public class ObjectFactory {
      */
     public ReadPerson createReadPerson() {
         return new ReadPerson();
+    }
+
+    /**
+     * Create an instance of {@link UpdatePersonHealthMeasureHistory }
+     * 
+     */
+    public UpdatePersonHealthMeasureHistory createUpdatePersonHealthMeasureHistory() {
+        return new UpdatePersonHealthMeasureHistory();
     }
 
     /**
@@ -281,6 +299,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonHealthMeasureHistory }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "updatePersonHealthMeasureHistory")
+    public JAXBElement<UpdatePersonHealthMeasureHistory> createUpdatePersonHealthMeasureHistory(UpdatePersonHealthMeasureHistory value) {
+        return new JAXBElement<UpdatePersonHealthMeasureHistory>(_UpdatePersonHealthMeasureHistory_QNAME, UpdatePersonHealthMeasureHistory.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePerson }{@code >}}
      * 
      */
@@ -332,6 +359,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "readPersonResponse")
     public JAXBElement<ReadPersonResponse> createReadPersonResponse(ReadPersonResponse value) {
         return new JAXBElement<ReadPersonResponse>(_ReadPersonResponse_QNAME, ReadPersonResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonHealthMeasureHistoryResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.soap.assignment.introsde/", name = "updatePersonHealthMeasureHistoryResponse")
+    public JAXBElement<UpdatePersonHealthMeasureHistoryResponse> createUpdatePersonHealthMeasureHistoryResponse(UpdatePersonHealthMeasureHistoryResponse value) {
+        return new JAXBElement<UpdatePersonHealthMeasureHistoryResponse>(_UpdatePersonHealthMeasureHistoryResponse_QNAME, UpdatePersonHealthMeasureHistoryResponse.class, null, value);
     }
 
     /**
