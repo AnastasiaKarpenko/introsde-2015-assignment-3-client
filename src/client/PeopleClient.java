@@ -32,6 +32,8 @@ public class PeopleClient{
         		printLifeStatus(ls);
         	}
         }
+        System.out.println("  ");
+        System.out.println("People number: "+pList.size());
 
        //Method #2 Print a person (with id=1)
         System.out.println("   ");
@@ -68,6 +70,10 @@ public class PeopleClient{
         System.out.println("METHOD #4: CREATING A NEW PERSON ");
     	printPersonDetails(createChuckNorris);
 
+    	System.out.println("  ");
+    	pList = people.getPeopleList();
+		System.out.println("People number before deleting the previousely created person: "+pList.size());
+
   //   	LifeStatus weight = new LifeStatus();
 		// weight.setValue("78.9");
 		// weight.setMeasure("weight");
@@ -85,10 +91,16 @@ public class PeopleClient{
 
 
     	//Method #5 Deleting a person
+    	
 		people.deletePerson(newId);
 		System.out.println("   ");
 		System.out.println("METHOD #5: DELETING A PREVIOUSELY CREATED PERSON ");
+		pList = people.getPeopleList();
+		System.out.println("People number after deleting the previousely created person: "+pList.size());
 		
+		//Method #6 readPersonHistory
+
+
 
 	
         
