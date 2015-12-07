@@ -1,0 +1,191 @@
+  
+METHOD #1: PRINTING ALL THE PEOPLE 
+   
+Person id: 1
+Person's name: Laura1434173223
+Person's lastname: Pausini
+Person's birthdate: 1987/02/03
+Person's lifestatus measure: 
+Measure name: weight
+Value: 99
+Person's lifestatus measure: 
+Measure name: height
+Value: 1.78
+   
+Person id: 2
+Person's name: Christina
+Person's lastname: Aguillera
+Person's birthdate: 1971/02/02
+Person's lifestatus measure: 
+Measure name: weight
+Value: 78.0
+Person's lifestatus measure: 
+Measure name: height
+Value: 1.79
+   
+Person id: 3
+Person's name: Maurizio 
+Person's lastname: Marchese
+Person's birthdate: 1973/03/03
+Person's lifestatus measure: 
+Measure name: weight
+Value: 68.0
+Person's lifestatus measure: 
+Measure name: height
+Value: 1.68
+   
+Person id: 4
+Person's name: Pavel
+Person's lastname: Kucherbaev
+Person's birthdate: 1974/04/04
+Person's lifestatus measure: 
+Measure name: weight
+Value: 74.0
+Person's lifestatus measure: 
+Measure name: height
+Value: 1.74
+  
+People number: 4
+   
+METHOD #2: READING THE PERSON WITH ID = 1 
+Person id: 1
+Person's name: Laura1434173223
+Person's lastname: Pausini
+Person's birthdate: 1987/02/03
+Person's lifestatus measure: 
+Measure name: weight
+Value: 99
+Person's lifestatus measure: 
+Measure name: height
+Value: 1.78
+   
+METHOD #3: UPDATING PERSON WITH ID = 1 (the first name only) 
+Person id: 1
+Person's name: Laura2135366904
+Person's lastname: Pausini
+Person's birthdate: 1987/02/03
+   
+METHOD #4: CREATING A NEW PERSON 
+Person id: 6457
+Person's name: Chuck
+Person's lastname: Norris
+Person's birthdate: 1945/01/01
+Person's lifestatus measure: 
+Measure name: weight
+Value: 78.9
+Person's lifestatus measure: 
+Measure name: height
+Value: 172
+  
+People number before deleting the previousely created person: 5
+   
+METHOD #5: DELETING A PREVIOUSELY CREATED PERSON 
+People number after deleting the previousely created person: 4
+  
+METHOD #6: READING AND PRINTING HISTORY OF WEIGHT MEASURES FOR PERSON ID = 1
+   
+Id of Measure History 1
+Measure name: weight
+Timestamp of the measure: 2012-12-27 23:00:00
+Measure's value: 83
+   
+Id of Measure History 2
+Measure name: weight
+Timestamp of the measure: 2013-02-26 23:00:00
+Measure's value: 80
+   
+Id of Measure History 3
+Measure name: weight
+Timestamp of the measure: 2013-06-29 22:00:00
+Measure's value: 75
+   
+Id of Measure History 15
+Measure name: weight
+Timestamp of the measure: 2018-12-27 23:00:00
+Measure's value: 100
+   
+Id of Measure History 915
+Measure name: weight
+Timestamp of the measure: null
+Measure's value: 199
+   
+Id of Measure History 916
+Measure name: weight
+Timestamp of the measure: null
+Measure's value: 99
+   
+Id of Measure History 917
+Measure name: weight
+Timestamp of the measure: null
+Measure's value: 99
+  
+METHOD #7: READING AND PRINTING ALL MEASURE TYPES
+   
+Measure type: weight
+   
+Measure type: height
+   
+Measure type: steps
+   
+Measure type: blood pressure
+   
+Measure type: heart rate
+   
+Measure type: bmi
+  
+METHOD #8: PRINTING THE VALUE OF A MEASURE TYPE WITH MID 
+Weight with mid = 1 of the person id = 1 has value: 83
+  
+METHOD #9: CREATE A NEW MEASURE (WEIGHT) AND UPDATE A HEALTH MEASURE HISTORY OF PERSON 1
+Person id: 1
+Person's name: Laura2135366904
+Person's lastname: Pausini
+Person's birthdate: 1987/02/03
+Person's lifestatus measure: 
+Measure name: weight
+Value: 99
+Person's lifestatus measure: 
+Measure name: height
+Value: 1.78
+  
+READING AND PRINTING HISTORY OF WEIGHT MEASURES FOR PERSON ID = 1
+   
+Id of Measure History 1
+Measure name: weight
+Timestamp of the measure: 2012-12-27 23:00:00
+Measure's value: 83
+   
+Id of Measure History 2
+Measure name: weight
+Timestamp of the measure: 2013-02-26 23:00:00
+Measure's value: 80
+   
+Id of Measure History 3
+Measure name: weight
+Timestamp of the measure: 2013-06-29 22:00:00
+Measure's value: 75
+   
+Id of Measure History 15
+Measure name: weight
+Timestamp of the measure: 2018-12-27 23:00:00
+Measure's value: 100
+   
+Id of Measure History 915
+Measure name: weight
+Timestamp of the measure: null
+Measure's value: 199
+   
+Id of Measure History 916
+Measure name: weight
+Timestamp of the measure: null
+Measure's value: 99
+   
+Id of Measure History 917
+Measure name: weight
+Timestamp of the measure: null
+Measure's value: 99
+   
+Id of Measure History 918
+Measure name: weight
+Timestamp of the measure: null
+Measure's value: 99
