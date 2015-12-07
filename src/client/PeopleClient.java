@@ -63,31 +63,36 @@ public class PeopleClient{
     	createChuckNorris.setName("Chuck");
     	createChuckNorris.setLastname("Norris");
     	createChuckNorris.setBirthdate("1945/01/01");
+    	
+
+    	LifeStatus weight = new LifeStatus();
+		weight.setValue("78.9");
+		weight.setMeasure("weight");
+		
+		LifeStatus height = new LifeStatus();
+		height.setValue("172");
+		height.setMeasure("height");
+		
+		
+		createChuckNorris.getLifeStatus().add(weight);
+		createChuckNorris.getLifeStatus().add(height);
+	
     	int newId = people.createPerson(createChuckNorris);
 
     	createChuckNorris = people.readPerson(newId);
     	System.out.println("   ");
         System.out.println("METHOD #4: CREATING A NEW PERSON ");
     	printPersonDetails(createChuckNorris);
+    	List<LifeStatus> lsList2 = createChuckNorris.getLifeStatus();
+        	for (LifeStatus ls2 : lsList2) {
+        		printLifeStatus(ls2);
+        	}
 
     	System.out.println("  ");
     	pList = people.getPeopleList();
 		System.out.println("People number before deleting the previousely created person: "+pList.size());
 
-  //   	LifeStatus weight = new LifeStatus();
-		// weight.setValue("78.9");
-		// weight.setMeasure("weight");
-		
-		// LifeStatus height = new LifeStatus();
-		// height.setValue("172");
-		// height.setMeasure("height");
-		
-		// List<LifeStatus> lifeStatus = new LinkedList<LifeStatus>();
-		// lifeStatus.add(weight);
-		// lifeStatus.add(height);
-		
-		// createChuckNorris.setLifeStatus(lifeStatus);
-  //   	printLifeStatus(lifestatus);
+   	
 
 
     	//Method #5 Deleting a person
